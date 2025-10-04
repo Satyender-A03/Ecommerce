@@ -24,13 +24,16 @@ const CreateSignin = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch("http://localhost:5000/auth", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(signin),
-      });
+      const response = await fetch(
+        "https://ecommerce-6-15vr.onrender.com/auth",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(signin),
+        }
+      );
 
       const data = await response.json();
       console.log("Server Response:", data);

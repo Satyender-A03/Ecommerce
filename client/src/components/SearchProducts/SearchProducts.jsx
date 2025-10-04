@@ -11,7 +11,7 @@ const SearchProducts = () => {
       if (!search.trim()) return;
       try {
         const res = await fetch(
-          `http://localhost:5000/products?search=${search}`
+          `https://ecommerce-6-15vr.onrender.com/products?search=${search}`
         );
         const data = await res.json();
         const filtered = data.filter((item) =>

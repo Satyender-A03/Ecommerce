@@ -33,13 +33,16 @@ const AddtoCart = () => {
       return;
     }
 
-    const result = await fetch("http://localhost:5000/payment", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ totalPrice }),
-    });
+    const result = await fetch(
+      "https://ecommerce-6-15vr.onrender.com/payment",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ totalPrice }),
+      }
+    );
 
     const data = await result.json();
 
@@ -115,7 +118,7 @@ const AddtoCart = () => {
                 >
                   <div className="flex items-center gap-4">
                     <img
-                      src={`http://localhost:5000/${
+                      src={`https://ecommerce-6-15vr.onrender.com/${
                         item.product?.image?.[0] || "images/default.jpg"
                       }`}
                       alt={item.product?.title || "Product"}

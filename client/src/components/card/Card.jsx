@@ -7,7 +7,9 @@ const Card = ({ product, index }) => {
   const getBrand = async (id) => {
     try {
       console.log(id);
-      const response = await fetch(`http://localhost:5000/brands/${id}`);
+      const response = await fetch(
+        `https://ecommerce-6-15vr.onrender.com/brands/${id}`
+      );
       const data = await response.json();
       console.log(data);
       setBrands(data);
@@ -27,7 +29,7 @@ const Card = ({ product, index }) => {
         className="relative rounded-2xl overflow-hidden cursor-pointer"
       >
         <img
-          src={`http://localhost:5000/${product.image[0]}`}
+          src={`https://ecommerce-6-15vr.onrender.com/${product.image[0]}`}
           alt={product.title}
           className="w-90 h-[60vh] object-cover object-top shadow-lg"
         />

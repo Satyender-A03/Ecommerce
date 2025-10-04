@@ -50,7 +50,7 @@ const SingleProduct = () => {
           {/* Main Image */}
           <div className="bg-gray-50 p-4 rounded-lg flex justify-center items-center">
             <img
-              src={`http://localhost:5000/${product.image[0]}`}
+              src={`https://ecommerce-6-15vr.onrender.com/${product.image[0]}`}
               alt={product.title}
               className="object-contain h-96 w-full rounded-lg"
             />
@@ -61,7 +61,7 @@ const SingleProduct = () => {
             {product.image.map((img, idx) => (
               <img
                 key={idx}
-                src={`http://localhost:5000/${img}`}
+                src={`https://ecommerce-6-15vr.onrender.com/${img}`}
                 alt={product.title}
                 className="h-20 w-20 object-contain border rounded cursor-pointer hover:border-indigo-600"
               />

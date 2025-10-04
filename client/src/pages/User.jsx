@@ -20,7 +20,7 @@ const User = () => {
   const getUser = async () => {
     try {
       const response = await fetch(
-        `http://localhost:5000/auth/${JSON.parse(
+        `https://ecommerce-6-15vr.onrender.com/${JSON.parse(
           localStorage.getItem("accessToken")
         )}`,
         {
