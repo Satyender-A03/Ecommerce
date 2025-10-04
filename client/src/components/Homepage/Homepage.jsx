@@ -295,7 +295,7 @@ const Homepage = () => {
                   className="w-85 relative rounded-2xl overflow-hidden "
                 >
                   <img
-                    src={`http://localhost:5000/${product.image[0]}`}
+                    src={`https://ecommerce-6-15vr.onrender.com/${product.image[0]}`}
                     alt="Winter Gear"
                     className="w-90 h-[60vh] object-cover object-top shadow-lg"
                   />
